@@ -1,7 +1,5 @@
-/* eslint-disable prettier/prettier */
-
-import { Replace } from 'src/helpers/replace';
-import { Content } from './content';
+import { Replace } from "src/helpers/replace";
+import { Content } from "./content";
 
 export interface NotificationProps {
   recipientID: string;
