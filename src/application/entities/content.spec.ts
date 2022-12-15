@@ -17,7 +17,3 @@ describe('Notification Content', () => {
   });
 
 });
-
-
-
-
