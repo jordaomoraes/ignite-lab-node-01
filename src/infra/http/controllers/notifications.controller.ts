@@ -26,8 +26,8 @@ export class NotificationsController {
     });
   }
 
-  @Get('count/from/:recipientId')
-  async countFromRecipient(@Param('recipientId') recipientID: string) {
+  @Get('count/from/:recipientID')
+  async countFromRecipient(@Param('recipientID') recipientID: string) {
     const { count } = await this.countRecipientNotifications.execute({
       recipientID,
     });
@@ -37,8 +37,8 @@ export class NotificationsController {
     };
   }
 
-  @Get('from/:recipientId')
-  async getFromRecipient(@Param('recipientId') recipientId: string) {
+  @Get('from/:recipientID')
+  async getFromRecipient(@Param('recipientID') recipientId: string) {
     const { notifications } = await this.getRecipientNotifications.execute({
       recipientId,
     });
@@ -71,7 +71,6 @@ export class NotificationsController {
       content,
       category,
     });
-    console.log('chegou na rota');
 
     return {
       notification: NotificationViewModel.toHTTP(notification),
